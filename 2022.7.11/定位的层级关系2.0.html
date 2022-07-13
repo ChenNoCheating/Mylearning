@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+        }
+
+        .one {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .two {
+            position: absolute;
+            z-index: 1;
+            /* 定义定位层级，0<1<2，类似于PS的图层 */
+            left: 0;
+            top: 0;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="two"></div>
+    <div class="one"></div>
+    <!-- <div class="two"></div> -->
+    <!-- 都定位时,写在更下方的会压住上方的，层级结构 -->
+</body>
+</html>
