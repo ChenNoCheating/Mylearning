@@ -44,7 +44,7 @@
 }
 
 .banner .wrapper .guide li span:nth-child(3) {
-    display: inline-block;
+    /* display: inline-block; */
     float: right;
     margin-right: 19px;
     margin-top: 19px;
@@ -100,4 +100,246 @@
 
 .banner ol .current {
     opacity: 1;
+}
+
+.goods {
+    margin-top: 48px;
+    height: 471px;
+}
+
+.goods .top {
+    height: 29px;
+}
+
+.goods .top h3 {
+    float: left;
+    line-height: 29px;
+	height: 29px;
+    margin-right: 34px;
+    font-size: 29px;
+    color: #333333;
+}
+
+.goods .top span {
+    float: left;
+    margin-top: 13px;
+	height: 16px;
+    line-height: 11px;
+    font-size: 16px;
+    color: #999999;
+}
+
+.goods .top a {
+    float: right;
+    margin-top: 13px;
+	height: 16px;
+    line-height: 16px;
+    font-size: 16px;
+    color: #999999;
+}
+
+.goods .top a p {
+    display: inline-block;
+    margin-left: 13px;
+    width: 7px;
+	height: 13px;
+    background-image: url(../images/sprites.png);
+    background-position: 0 -109px;
+}
+
+.goods .bottom {
+    height: 405px;
+    margin-top: 37px;
+}
+
+.goods .bottom li a {
+    display: block;
+    width: 305px;
+    height: 405px;
+}
+
+.goods .bottom li div {
+    width: 305px;
+    height: 305px;
+    background-size: contain;
+}
+
+.goods .bottom .g1 {
+    background-image: url(../uploads/new_goods_1.jpg);
+}
+
+.goods .bottom .g2 {
+    background-image: url(../uploads/new_goods_2.jpg);
+}
+
+.goods .bottom .g3 {
+    background-image: url(../uploads/new_goods_3.jpg);
+}
+
+.goods .bottom .g4 {
+    background-image: url(../uploads/new_goods_4.jpg);
+}
+
+.goods .bottom li {
+    position: relative;
+    float: left;
+    margin-right: 6px;
+}
+
+.goods .bottom li .xinpin {
+    position: absolute;
+    padding-top: 7px;
+    left: 17px;
+    top: 18px;
+    width: 28px;
+	height: 51px;
+    border-radius: 5px;
+    border: 2px solid #27ba9b;
+    font-size: 18px;
+    text-align: center;
+    line-height: 18px;
+    color: #27ba9b;
+}
+
+.goods .bottom li:nth-child(4) {
+    margin-right: 0;
+}
+
+.goods .bottom li span {
+    display: block;
+    padding: 22px 65px;
+    width: 305px;
+    height: 100px;
+    background-color: #f0f9f4;
+}
+
+.goods .bottom .name {
+    width: 200px;
+	height: 20px;
+    text-align: center;
+    margin-bottom: 19px;
+    font-size: 20px;
+    line-height: 20px;
+    color: #333333;
+}
+
+.goods .bottom .x {
+    float: left;
+    margin-top: 4px;
+    margin-left: 62px;
+    margin-right: 3px;
+    width: 11px;
+	height: 14px;
+    line-height: 14px;
+    font-size: 17px;
+    color: #9a2e1f;
+}
+
+.goods .bottom .price {
+    float: left;
+    margin-right: 37px;
+    width: 42px;
+	height: 18px;
+    line-height: 18px;
+    font-size: 23px;
+    color: #9a2e1f;
+}
+
+.fresh {
+    height: 673px;
+    margin-top: 34px;
+}
+
+.fresh .hd {
+    height: 62px;
+}
+
+.fresh .hd h2 {
+    float: left;
+    margin-right: 674px;
+    width: 58px;
+	height: 28px;
+    line-height: 28px;
+    font-weight: normal;
+    color: #333333;
+    font-size: 29px;
+}
+
+.fresh .hd li a {
+    float: left;
+    padding: 0 7px;
+    margin-right: 11px;
+    margin-top: 6px;
+    height: 20px;
+    line-height: 20px;
+    font-weight: normal;
+}
+
+.fresh .hd li a:hover {
+    color: #fefbfc;
+    background-color: #27ba9b;
+}
+
+.fresh .hd .all {
+    float: right;
+    margin-top: 9px;
+	height: 16px;
+    line-height: 16px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #999999;
+}
+
+.fresh .hd .all span {
+    display: inline-block;
+    margin-left: 15px;
+    width: 7px;
+	height: 13px;
+    background-image: url(../images/sprites.png);
+    background-position: 0 -109px;
+}
+
+.fresh .bd {
+    height: 610px;
+}
+
+.fresh .bd .left {
+    float: left;
+    width: 240px;
+	height: 610px;
+	background-color: #000000;
+}
+
+.fresh .bd ul li {
+    float: left;
+    padding: 8px 29px 13px;
+    width: 242px;
+	height: 304px;
+    margin-left: 8px;
+    margin-bottom: 3px;
+}
+
+.fresh .bd ul li:hover {
+    background-color: ;
+}
+
+.fresh .bd ul li img {
+    max-width: 184px;
+}
+
+.fresh .bd ul li h2 {
+    margin-top: 12px;
+    font-size: 16px;
+	font-weight: normal;
+}
+
+.fresh .bd ul h3 {
+    font-size: 17px;
+	font-weight: normal;
+    color: #9a2e1f;
+}
+
+.fresh .bd ul h3 span {
+    font-size: 22px;
+	font-weight: normal;
 }
