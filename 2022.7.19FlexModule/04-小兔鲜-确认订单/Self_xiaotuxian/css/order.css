@@ -214,3 +214,36 @@ body {
     font-size: 12px;
     color: #989898;
 }
+
+.account {
+    padding: 15px;
+}
+
+.account div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.account div:last-child {
+    margin-bottom: 0;
+}
+
+.account div:nth-child(2) h5 {
+    margin-right: 20px;
+}
+
+.account div h5,
+ .account p{
+    font-size: 13px;
+    color: #262626;
+    font-weight: 400;
+}
+
+.account p {
+    font-weight: 100;
+}
+
+.account div:last-child p {
+    color: #cf4444;
+}
