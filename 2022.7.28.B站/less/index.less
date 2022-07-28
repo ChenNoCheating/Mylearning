@@ -1,0 +1,133 @@
+@import url(./base.less);
+
+@vw: 3.75vw;
+@bilir: #fb7299;
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: (84/@vw);
+    z-index: 1;
+    background-color: #fff;
+
+    .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: (44/@vw);
+        padding: 0 (12/@vw) 0 (18/@vw);
+
+        .left {
+            .Navbar_logo {
+                font-size: (28/@vw);
+                color: @bilir;
+            }
+        }
+
+        .right {
+            display: flex;
+            justify-content: space-between;
+            width: (160/@vw);
+
+            a {
+                display: block;
+            }
+
+            .iconfont {
+                font-size: (22/@vw);
+                color: #ccc;
+            }
+
+            .login {
+                width: (24/@vw);
+                height: (24/@vw);
+            }
+
+            .download {
+                width: (72/@vw);
+                height: (24/@vw);
+            }
+
+            .iconfont {
+                font-size: (22/@vw);
+            }
+        }
+    }
+
+    .bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: (40/@vw);
+        border-bottom: 1px solid #eee;
+        
+        .tab {
+            ul {
+                display: flex;
+                li {
+                    padding: 0 (16/@vw);
+                    a {
+                        display: block;
+                        height: (38/@vw);
+                        line-height: (38/@vw);
+                        font-size: (14/@vw);
+
+                        &.current {
+                            color: @bilir;
+                            border-bottom: 2px solid @bilir;
+                        }
+                    }
+                }
+            }
+        }
+
+        .more {
+            a {
+                display: block;
+                width: (40/@vw);
+                height: (40/@vw);
+                line-height: (40/@vw);
+                text-align: center;
+                
+                .iconfont {
+                    font-size: (22/@vw);
+                    color: #aaa;
+                }
+            }
+        }
+    }
+}
+
+.video_content {
+    margin: (84/@vw) (5/@vw);
+    .video_list {
+        display: flex;
+        flex-wrap: wrap;
+        a {
+            font-size: 3.2vw;
+            width: 50%;
+            padding: (8/@vw) (5/@vw);
+
+            .pic {
+                position: relative;
+                .view {
+                    display: flex;
+                    justify-content: space-between;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    padding: (4/3vw) 1.6vw;
+                    color: #fff;
+                    background: linear-gradient(0deg,rgba(0,0,0,.85),transparent);
+                }
+            }
+
+            .txt {
+                color: #212121;
+                margin-top: 1.6vw;
+            }
+        }
+    }
+}
