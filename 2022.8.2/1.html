@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /**
+         * @param {number[]} nums
+         * @param {number} target
+         * @param {number[]} a
+         * @param {number} b
+         * @return {number[]}
+         */
+        var twoSum = function(nums,target) {
+            var len = nums.length;
+            if(len<2) return[]
+            var map = new Map();
+            for (var i=0;i<len;i++) {
+                var num = nums[i];
+                var diff = target-num;
+                console.log(diff);
+                console.log(map.has(diff));
+                if(map.has(diff)) {
+                    alert(map.get(diff)+' '+i);
+                    return[map.get(diff),i]
+                }
+                map.set(num,i);
+            }
+            console.log(map);
+            return[]
+        }
+
+        var a = [3,2,4];
+        var b = 6;
+        twoSum(a,b);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

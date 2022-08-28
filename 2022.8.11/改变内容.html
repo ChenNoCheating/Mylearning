@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Show The Time</button>
+    <div>Time</div>
+    <script>
+        const btn = document.querySelector('button');
+        const div = document.querySelector('div');
+        btn.onclick = function() {
+            div.innerText = new Date();
+            // innnerText and innerHtml;innnerHtml react to the <strong>Today</strong>2022, bt innerText can remove the ' ' and '\n' we use innerHtml much more
+        }
+    </script>
+</body>
+</html>

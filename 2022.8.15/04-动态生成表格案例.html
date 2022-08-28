@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table {
+            width: 500px;
+            margin: 100px auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        
+        td,
+        th {
+            border: 1px solid #333;
+        }
+        
+        thead tr {
+            height: 40px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>科目</th>
+                <th>成绩</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        // 1.先去准备好学生的数据
+        var datas = [{
+            name: '魏璎珞',
+            subject: 'JavaScript',
+            score: 100
+        }, {
+            name: '弘历',
+            subject: 'JavaScript',
+            score: 98
+        }, {
+            name: '傅恒',
+            subject: 'JavaScript',
+            score: 99
+        }, {
+            name: '明玉',
+            subject: 'JavaScript',
+            score: 88
+        }, {
+            name: '大猪蹄子',
+            subject: 'JavaScript',
+            score: 0
+        }];
+        // 2. 往tbody 里面创建行： 有几个人（通过数组的长度）我们就创建几行
+        var tbody = document.querySelector('tbody');
+        for(var i=0;i<datas.length;i++) {
+            var tr = document.createElement('tr');
+            tbody.appendChild(tr);
+            for(k in datas[i]) {
+                var td = document.createElement('td');
+                tr.appendChild(td);
+                td.innerHTML = datas[i][k];
+            }
+            var td = document.createElement('td');
+            tr.appendChild(td);
+            var a = document.createElement("a");
+            td.appendChild(a);
+            a.innerHTML = '删除';
+            a.href = 'javascript:;';
+        }
+
+        var a = document.querySelector('tbody').querySelectorAll('a');
+        var tr = document.querySelector('tbody').querySelectorAll('tr');
+        for(var i=0;i<a.length;i++) {
+            a[i].onclick = function() {
+                tbody.removeChild(this.parentNode.parentNode);
+            }
+        }
+    </script>
+</body>
+
+</html>

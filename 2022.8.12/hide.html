@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            margin: 200px;
+        }
+
+        .box img {
+            width: 70px;
+        }
+
+        .box i {
+            position: absolute;
+            left: -10px;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>淘宝二维码</div>
+        <img src="./images/tao.png" alt="">
+        <i class="close-btn">x</i>
+    </div>
+    <script>
+        const img = document.querySelector('img');
+        const btn = document.querySelector('.close-btn');
+        btn.onclick = function() {
+            img.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
