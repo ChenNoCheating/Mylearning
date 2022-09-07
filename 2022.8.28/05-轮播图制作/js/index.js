@@ -49,7 +49,7 @@ window.addEventListener('load', function() {
             // num = circle = index;
             console.log(focusWidth);
             console.log(index);
-
+            
             animate(ul, -index * focusWidth);
         })
     }
