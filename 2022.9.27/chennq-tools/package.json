@@ -1,0 +1,12 @@
+{
+    "name":"chennq-tools",
+    "version": "1.0.0",
+    "main": "index.js",
+    "description": "",
+    "keywords": [
+        "chennq",
+        "dateFormat",
+        "escape"   
+    ],
+    "license": "ISC"
+}

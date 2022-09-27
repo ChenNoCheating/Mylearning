@@ -31,35 +31,25 @@
     <button>点击夏雨荷才走</button>
     <span>夏雨荷</span>
     <script>
-        // 缓动动画函数封装obj目标对象 target 目标位置
-        // 思路：
-        // 1. 让盒子每次移动的距离慢慢变小， 速度就会慢慢落下来。
-        // 2. 核心算法：(目标值 - 现在的位置) / 10 做为每次移动的距离 步长
-        // 3. 停止的条件是： 让当前盒子位置等于目标位置就停止定时器
-        function animate(obj, target) {
-            // 先清除以前的定时器，只保留当前的一个定时器执行
+        function animate(obj,target) {
             clearInterval(obj.timer);
+            var step = 1 ;
             obj.timer = setInterval(function() {
-                // 步长值写到定时器的里面
-                var step = (target - obj.offsetLeft) / 10;
-                if (obj.offsetLeft == target) {
-                    // 停止动画 本质是停止定时器
+                if(obj.offsetLeft >= target) {
                     clearInterval(obj.timer);
                 }
-                // 把每次加1 这个步长值改为一个慢慢变小的值  步长公式：(目标值 - 现在的位置) / 10
                 obj.style.left = obj.offsetLeft + step + 'px';
-
-            }, 15);
+                step = Math.ceil((target - obj.offsetLeft) / 10);
+                console.log(step);
+            },30);
         }
+
         var span = document.querySelector('span');
         var btn = document.querySelector('button');
 
-        btn.addEventListener('click', function() {
-                // 调用函数
-                animate(span, 500);
-            })
-            // 匀速动画 就是 盒子是当前的位置 +  固定的值 10 
-            // 缓动动画就是  盒子当前的位置 + 变化的值(目标值 - 现在的位置) / 10）
+        btn.addEventListener('click',function() {
+            animate(span,300);
+        })
     </script>
 </body>
 
