@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
+  </head>
+<body>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  
+  <div id="app">
+    {{ message }}
+  </div>
+  <div id="container-1">
+    {{ message }}
+    <h4>
+      {{school.name}}<div></div>{{school.phonenuber}}<br>
+      {{campus[0]}}
+    </h4>
+  </div>
+  <div id="container-2">{{ message }}</div>
+
+  <script>
+    const { createApp } = Vue
+  
+    createApp({
+    data() {
+      return {
+        message: 'Hello Vue!Ok111'
+      }
+    }
+    }).mount('#app')
+
+    const app1 = createApp({
+      data() {
+      return {
+        message: 'That is hard',
+        school:{
+          name:'电子科技大学',
+          phonenuber:'51515'
+        },
+        campus:['清水河','沙河']
+      }
+    }
+})
+app1.mount('#container-1')
+
+const app2 = createApp({
+  data() {
+      return {
+        message: 'but I will do it'
+      }
+    }
+})
+app2.mount('#container-2')
+
+  </script>
+</body>
+</html>

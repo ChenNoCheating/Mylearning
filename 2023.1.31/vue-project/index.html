@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
+  </head>
+  <body>
+    <!-- <script type="module" src="/src/main.js"></script> -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <div id="app">
+      <h2 v-text="message"></h2>
+      <h2 v-html="content"></h2>
+      <input type="button" value="单机" v-on:click="dolt">
+      <input type="button" value="双击" @dblclick="dolt">
+      <div @click="ChangeName">{{ Name }}</div>
+    </div>
+
+    <script>
+      const { createApp } = Vue
+  
+     createApp({
+        data() {
+          return {
+            message: '成都找工作',
+            content:"<a href='http://www.baidu.com'>百度搜索引擎</a>",
+            Name:"电子科技大学",
+          }
+        },
+        methods:{
+          dolt:function(){
+            alert('dsdsd')
+          },
+          ChangeName:function(){
+            this.Name +='好牛逼'
+          }
+        }
+      }).mount('#app')
+    </script>
+  </body>
+</html>
